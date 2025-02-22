@@ -1,2 +1,15 @@
 # shu
-Single-header-file utilities for C
+## Public domain single-header-file utilities for C/C++
+Everything in this library is written in C (expect for the tests) for portability.
+
+| File | Latest Version | Use Cases | Lines | Description |
+| --- | --- | --- | --- | --- |
+| shu_ds.h | 1.0 | Any | 290 | Generic dynamic array. **Works with C++** |
+
+## Usage
+To be able to access functionalities of the libraries, do:
+e.g. shu_ds.h
+```
+#define SHU_DS_IMPLEMENTATION
+#include "shu_ds.h"
+```

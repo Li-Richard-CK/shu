@@ -1,11 +1,12 @@
 /* shu_ds.h - public domain data structures - Li Richard 2025
  *
  * This is a single-header library that provides generic,
- * efficient dynamic arrays for C (/ C++).
+ * efficient dynamic arrays for C (/C++).
  * 
  * Documentation:
- *    -- link --
- *
+ *    man 3 shu
+ *    man 3 <function full name>
+ *    
  * To use this library, do:
  *    #define SHU_DS_IMPLEMENTATION
  *    #include "shu_ds.h"

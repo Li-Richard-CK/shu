@@ -1,5 +1,5 @@
 # shu
-## Public domain single-header-file utilities for C/C++
+## Public domain (MIT license) single-header-file utilities for C/C++
 Everything in this library is written in C (expect for the tests) for portability.
 
 | File | Latest Version | Use Cases | Lines | Description |

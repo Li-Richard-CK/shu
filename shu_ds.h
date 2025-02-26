@@ -4,8 +4,7 @@
  * efficient dynamic arrays for C (/C++).
  * 
  * Documentation:
- *    man 3 shu
- *    man 3 <function full name>
+ *    ----------
  *    
  * To use this library, do:
  *    #define SHU_DS_IMPLEMENTATION
@@ -212,7 +211,7 @@ _shuds_next_pow2(size_t n)
     return n;
 }
 
-#define SHUDS_ARR_DEFAULT_CAPACITY (1 << 1) // 2
+#define SHUDS_ARR_DEFAULT_CAPACITY (2)
 
 // shuds_arr_resize
 void

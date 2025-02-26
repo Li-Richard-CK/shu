@@ -4,8 +4,8 @@
  * Will not define no short names or implementation by default.
  *
  * Documentation:
- *    man 3 shu
-*/
+ *    ----------
+ */
 #ifndef LIBSHU_H
 #define LIBSHU_H
 

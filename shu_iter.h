@@ -6,7 +6,8 @@
  * Documentation:
  *    ----------
  *    
- * To use this library, do:
+ * To use this library, do (doing this will also include shu_ds.h and
+ *  define SHU_DS_IMPLEMENTATION):
  *    #define SHU_ITER_IMPLEMENTATION
  *    #include "shu_iter.h"
  *
@@ -55,17 +56,42 @@ extern shuiter_iter_t shuiter_create(shuiter_itert_t);
  *
 */
 #ifdef SHU_ITER_IMPLEMENTATION
+#define SHU_DS_IMPLEMENTATION
 #include "shu_ds.h"
 
 static
 void *_shuiter_arritf(void *arr)
+{
+    if (!arr)
+        return NULL;
+
+    static int i = -1;    
+    i++;
+    if (shuds_arr_header(arr)->len >= (size_t)i)
+    {
+        i = -1;
+        return NULL;
+    }
+
+    return arr[i];
+}
 
 shuiter_iter_t
 shuiter_create(shuiter_itert_t itert)
 {
     shuiter_iter_t new_iter;
     new_iter.itert = itert;
+    switch(itert)
+    {
+    case SHUITER_ITERT_ARR:
+        new_iter.itf = _shuiter_arritf;
+        break;
+    default:
+        new_iter.itf = NULL;
+        break;
+    }
 
+    return new_iter;
 }
 
 #endif // SHU_ITER_IMPLEMENTATION
